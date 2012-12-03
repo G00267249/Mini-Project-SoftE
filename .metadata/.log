@@ -1,0 +1,22 @@
+!SESSION 2012-12-03 17:23:19.873 -----------------------------------------------
+eclipse.buildId=M20120914-1800
+java.version=1.6.0_37
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -keyring /Users/abdulrahmanalharbi/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -keyring /Users/abdulrahmanalharbi/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2012-12-03 17:23:42.068
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.ui 2 2 2012-12-03 17:27:55.946
+!MESSAGE Invalid property category path: ValidationPropertiesPage (bundle: org.eclipse.wst.xml.ui, propertyPage: org.eclipse.wst.xml.ui.propertyPage.project.validation)
+
+!ENTRY com.google.gdt.eclipse.suite 1 0 2012-12-03 17:34:38.768
+!MESSAGE Registering: com.google.appengine.eclipse.sdkbundle_1.7.3
+
+!ENTRY com.google.gdt.eclipse.suite 1 0 2012-12-03 17:34:38.874
+!MESSAGE Registering: com.google.gwt.eclipse.sdkbundle_2.5.0.v201210291354-rel-r42
+
+!ENTRY org.eclipse.ui 2 2 2012-12-03 17:41:07.412
+!MESSAGE Invalid preference category path: org.eclipse.wst.html.ui.preferences.web (bundle: org.eclipse.wst.css.ui, page: org.eclipse.wst.css.ui.preferences.css)

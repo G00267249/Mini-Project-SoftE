@@ -226,7 +226,6 @@ public class Main {
 		textField_4.setColumns(10);
 		
 		JSpinner spinner_1 = new JSpinner();
-		
 		panel_1.add(spinner_1, "cell 7 10");
 		
 		textField_5 = new JTextField();

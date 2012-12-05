@@ -1,0 +1,13 @@
+import javax.swing.JPanel;
+
+
+public class True_False extends JPanel {
+
+	/**
+	 * Create the panel.
+	 */
+	public True_False() {
+
+	}
+
+}

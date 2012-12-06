@@ -1,4 +1,11 @@
 import java.awt.BorderLayout;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.URI;
+import java.util.Scanner;
 
 import javax.swing.JFrame;
 import javax.swing.JTabbedPane;
@@ -10,13 +17,19 @@ public class Main {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		File file = new File("ExamQ.txt");
+		file.delete();	
 		JFrame frame = new JFrame();
 		JTabbedPane t = new JTabbedPane();
 		frame.getContentPane().add(t, BorderLayout.CENTER);
 		frame.setSize(900,600);
 		t.addTab("True-False", new True_False());
 		t.addTab("Matching", new Matching());
+		t.addTab("Multiple Choise", new Multiple_Choice());
+		t.addTab("Short Answer", new Short_Answer());
+		t.addTab("Essay", new Essay());
+
+		
 		frame.setVisible(true);
 
 	}

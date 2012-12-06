@@ -1,0 +1,13 @@
+import javax.swing.JPanel;
+
+
+public class Short1 extends JPanel {
+
+	/**
+	 * Create the panel.
+	 */
+	public Short1() {
+
+	}
+
+}

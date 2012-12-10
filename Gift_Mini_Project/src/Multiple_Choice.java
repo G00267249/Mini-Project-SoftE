@@ -25,55 +25,43 @@ public class Multiple_Choice extends JPanel{
 	private JTextField choiseTextFilde2;
 	private JTextField choiseTextFilde3;
 	private JTextField choiseTextFilde4;
-	//JTextPane question_mulit;
 	private JTextField feadbackFilde1;
 	private JTextField feadbackFildeB;
 	private JTextField feadbackFildeC;
 	private JTextField feadbackFildeD;
 	private JCheckBox checkBoxoneanswer;
 	private TextArea question_mulit;
-//	private JFrame frame;
 	public static PrintWriter out;
 
 	public Multiple_Choice() {
-		setLayout(new MigLayout("", "[][700px,grow][:40px:80px,grow]", "[][grow][][][][][][][][]"));
-//		frame = new JFrame();
-//		frame.setBounds(100, 100, 966, 588);
-//		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);		
-//		JPanel panel_1 = new JPanel();
-//		panel_1.setLayout(new MigLayout("", "[][700px,grow][:40px:80px,grow]", "[][grow][][][][][][][][]"));
+		setLayout(new MigLayout("", "[][700px,grow][:40px:80px,grow]", "[][grow][][][][][][][][][]"));
 		
 		JLabel lblQuestionTitleoptional_1 = new JLabel("Question Title (optional)");
 		add(lblQuestionTitleoptional_1, "cell 0 0,alignx right");
 		
 		questionTitle_multi = new JTextField();
-		add(questionTitle_multi, "cell 1 0,growx,span");
+		add(questionTitle_multi, "cell 1 0 2 1,growx");
 		questionTitle_multi.setColumns(10);
 		
 		JLabel lblQuestion_1 = new JLabel("Question");
 		add(lblQuestion_1, "cell 0 1,alignx right,aligny top");
 		
 		question_mulit = new TextArea();
-		add(question_mulit, "cell 1 1,grow,span");
+		add(question_mulit, "cell 1 1 2 1,grow");
 		
-//		JButton btnCancelclearQuestionText_1 = new JButton("Cancel/Clear Question Text");
-//		panel_1.add(btnCancelclearQuestionText_1, "cell 1 2,alignx right");
-		
-//		JButton btnAddAnswer = new JButton("Add Answer");
-//		panel_1.add(btnAddAnswer, "cell 0 3,alignx left");
 		
 		JLabel lblA = new JLabel("A");
-		add(lblA, "flowx,cell 1 3,split");
+		add(lblA, "flowx,cell 1 3");
 		
 		choiseTextFilde1 = new JTextField();
-		add(choiseTextFilde1, "flowx,cell 1 3,growx,split");
+		add(choiseTextFilde1, "flowx,cell 1 3,growx");
 		choiseTextFilde1.setColumns(10);
 		
 		JLabel lblfeadbak = new JLabel("Feedback");
-		add(lblfeadbak, "flowx,cell 1 3,split");
+		add(lblfeadbak, "flowx,cell 1 3");
 		
 		feadbackFilde1 = new JTextField();
-		add(feadbackFilde1, "flowx,cell 1 3,growx,wrap");
+		add(feadbackFilde1, "flowx,cell 1 3,growx");
 		feadbackFilde1.setColumns(10);
 		
 		final JSpinner spinner = new JSpinner();
@@ -81,16 +69,16 @@ public class Multiple_Choice extends JPanel{
 		//////////////row2
 		
 		JLabel lblB = new JLabel("B");
-		add(lblB, "flowx,cell 1 4,split");
+		add(lblB, "flowx,cell 1 4");
 		
 		choiseTextFilde2 = new JTextField();
-		add(choiseTextFilde2, "flowx,cell 2 4,growx,split");
+		add(choiseTextFilde2, "flowx,cell 1 4,growx");
 		choiseTextFilde2.setColumns(10);
 		JLabel lblfeedbakB = new JLabel("Feedback");
-		add(lblfeedbakB, "flowx,cell 2 4,split");
+		add(lblfeedbakB, "flowx,cell 1 4");
 		
 		feadbackFildeB = new JTextField();
-		add(feadbackFildeB, "flowx,cell 2 4,growx,wrap");
+		add(feadbackFildeB, "flowx,cell 1 4,growx");
 		feadbackFildeB.setColumns(10);
 		
 		final JSpinner spinner_1 = new JSpinner();
@@ -102,16 +90,16 @@ public class Multiple_Choice extends JPanel{
 		
 		
 		JLabel lblC = new JLabel("C");
-		add(lblC, "flowx,cell 1 5,split");
+		add(lblC, "flowx,cell 1 5");
 		choiseTextFilde3 = new JTextField();
-		add(choiseTextFilde3, "flowx,cell 1 5,growx,split");
+		add(choiseTextFilde3, "flowx,cell 1 5,growx");
 		choiseTextFilde3.setColumns(10);
 		
 		JLabel lblfeedbakC = new JLabel("Feedback");
-		add(lblfeedbakC, "flowx,cell 2 5,split");
+		add(lblfeedbakC, "flowx,cell 1 5");
 		
 		feadbackFildeC = new JTextField();
-		add(feadbackFildeC, "flowx,cell 2 5,growx,wrap");
+		add(feadbackFildeC, "flowx,cell 1 5,growx");
 		feadbackFildeC.setColumns(10);
 		
 		final JSpinner spinner_2 = new JSpinner();
@@ -120,29 +108,48 @@ public class Multiple_Choice extends JPanel{
 		
 		
 		JLabel lblD = new JLabel("D");
-		add(lblD, "flowx,cell 1 6,split");
+		add(lblD, "flowx,cell 1 6");
 		choiseTextFilde4 = new JTextField();
-		add(choiseTextFilde4, "flowx,cell 1 6,growx,split");
+		add(choiseTextFilde4, "flowx,cell 1 6,growx");
 		choiseTextFilde4.setColumns(10);
 		
 		JLabel lblfeedbakD = new JLabel("Feedback");
-		add(lblfeedbakD, "flowx,cell 2 6,split");
+		add(lblfeedbakD, "flowx,cell 1 6");
 		
 		feadbackFildeD = new JTextField();
-		add(feadbackFildeD, "flowx,cell 2 6,growx,wrap");
+		add(feadbackFildeD, "flowx,cell 1 6,growx");
 		feadbackFildeD.setColumns(10);
 		
 		final JSpinner spinner_3 = new JSpinner();
 		add(spinner_3, "cell 2 6,growx");
-		
-//		JButton btnSaveToTest_1 = new JButton("Save to test file");
-//		panel_1.add(btnSaveToTest_1, "cell 0 7");
 		JButton btnAddAnotherMultiple = new JButton("Save and Add Another Multiple Choice");	//Multi
-		add(btnAddAnotherMultiple, "cell 0 9 2097051 1,split");
+		add(btnAddAnotherMultiple, "cell 0 9 3 1");
 		
 		checkBoxoneanswer = new JCheckBox("One Correct Answer");
-		add(checkBoxoneanswer, "cell 1 9,wrap");
-		
+		add(checkBoxoneanswer, "cell 0 9 2 1");
+		JButton btnAddAnotherMultiple2 = new JButton("Cancle/Clear Question text");	//Multi
+		add(btnAddAnotherMultiple2, "cell 0 9 3 1");
+		btnAddAnotherMultiple2.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				// TODO Auto-generated method stub
+				questionTitle_multi.setText("");
+				question_mulit.setText("");			
+				choiseTextFilde1.setText("");
+				choiseTextFilde2.setText("");
+				choiseTextFilde3.setText("");
+				choiseTextFilde4.setText("");
+				feadbackFilde1.setText("");
+				feadbackFildeB.setText("");
+				feadbackFildeC.setText("");
+				feadbackFildeD.setText("");
+				spinner.setValue(0);
+				spinner_1.setValue(0);
+				spinner_2.setValue(0);
+				spinner_3.setValue(0);
+			}
+		});
 		checkBoxoneanswer.addActionListener(new ActionListener() {
 			
 			@Override
@@ -194,14 +201,15 @@ public class Multiple_Choice extends JPanel{
 					
 					
 					questionTitle_multi.setText("");
-					question_mulit.setText("");
-					
+					question_mulit.setText("");			
 					choiseTextFilde1.setText("");
 					choiseTextFilde2.setText("");
 					choiseTextFilde3.setText("");
 					choiseTextFilde4.setText("");
-					
-					
+					feadbackFilde1.setText("");
+					feadbackFildeB.setText("");
+					feadbackFildeC.setText("");
+					feadbackFildeD.setText("");
 					spinner.setValue(0);
 					spinner_1.setValue(0);
 					spinner_2.setValue(0);
@@ -226,8 +234,6 @@ public class Multiple_Choice extends JPanel{
 			}
 		});
 		
-//		frame.add(panel_1);
-//		frame.setVisible(true);
 
 	}
 

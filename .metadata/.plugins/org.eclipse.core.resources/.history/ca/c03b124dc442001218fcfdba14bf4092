@@ -1,0 +1,13 @@
+import javax.swing.JPanel;
+
+
+public class Es extends JPanel {
+
+	/**
+	 * Create the panel.
+	 */
+	public Es() {
+
+	}
+
+}

@@ -29,6 +29,18 @@ public class Descriptionn extends JPanel {
 		
 		JButton btnSaveToFile = new JButton("Save to file");
 		add(btnSaveToFile, "cell 0 2");
+		
+		JButton btnCancleclearQuestion = new JButton("Cancle/Clear Description");
+		add(btnCancleclearQuestion, "cell 1 2,alignx right");
+		btnCancleclearQuestion.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				textArea.setText("");
+				
+			}
+		});
 		btnSaveToFile.addActionListener(new ActionListener() {
 			
 			@Override

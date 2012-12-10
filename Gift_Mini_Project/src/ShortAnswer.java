@@ -1,4 +1,4 @@
-//package Types_of_Questions;
+
 
 import java.awt.Color;
 import java.awt.Dimension;
@@ -29,10 +29,6 @@ public class ShortAnswer extends JPanel {
 	private JLabel label;
 	public static PrintWriter out;
 
-//	private ArrayList<JLabel> labelList = new ArrayList<JLabel>();
-//	private ArrayList<JTextField> fieldList = new ArrayList<JTextField>();
-//	private String [] letters = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M",
-//			 			 "N", "O","P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"};
 	int i=1;
 	private JTextField textField_1;
 	private JTextField textField_2;
@@ -55,9 +51,6 @@ public class ShortAnswer extends JPanel {
 		final TextArea textArea = new TextArea();
 		add(textArea, "cell 1 1 2 1,grow");
 
-		
-//		labelList.add(new JLabel(letters[i-1]));
-//		fieldList.add(new JTextField());
 				
 		JPanel panel = new JPanel();
 		panel.setBorder(new TitledBorder(null, "Answer", TitledBorder.LEFT, TitledBorder.TOP, null, null));
@@ -81,6 +74,20 @@ public class ShortAnswer extends JPanel {
 		JButton btnSaveToFile = new JButton("Save to file");
 		add(btnSaveToFile, "cell 0 3,growx");
 		
+		JButton btnCancleclearQuestion = new JButton("Cancle/Clear Question");
+		add(btnCancleclearQuestion, "cell 1 3,alignx right");
+		btnCancleclearQuestion.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				textField.setText("");
+				textArea.setText("");
+				textField_1.setText("");
+				textField_2.setText("");
+				
+			}
+		});
 		btnSaveToFile.addActionListener(new ActionListener() {
 			
 			@Override
@@ -122,7 +129,7 @@ public class ShortAnswer extends JPanel {
 				textField_2.setText("");
 			}
 		});
-		//setVisible(true);
+
 
 		
 	}

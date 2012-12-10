@@ -1,0 +1,13 @@
+import javax.swing.JPanel;
+
+
+public class Matching_Edit extends JPanel {
+
+	/**
+	 * Create the panel.
+	 */
+	public Matching_Edit() {
+
+	}
+
+}

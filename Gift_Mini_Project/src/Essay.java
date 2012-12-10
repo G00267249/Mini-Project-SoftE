@@ -42,6 +42,19 @@ public class Essay extends JPanel {
 		
 				JButton btnNewButton = new JButton("Save to file");
 				add(btnNewButton, "cell 0 3,alignx left");
+				
+				JButton btnCancleclearQuestion = new JButton("Cancle/Clear Question");
+				add(btnCancleclearQuestion, "cell 1 3,alignx right");
+				btnCancleclearQuestion.addActionListener(new ActionListener() {
+					
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						// TODO Auto-generated method stub
+						jtfTitle.setText("");
+						jtfQ.setText("");
+						
+					}
+				});
 		
 		btnNewButton.addActionListener(new ActionListener() {
 			

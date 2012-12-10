@@ -32,9 +32,7 @@ public class Matching extends JPanel{
 	public Matching() {
 
 		
-		setLayout(new MigLayout("",
-				"[172.00][-18.00][grow,fill][][][][149.00,grow,fill][]",
-				"[][grow][][][][][][][][][][][][]"));
+		setLayout(new MigLayout("", "[172.00][-18.00][grow,fill][][][][149.00,grow,fill][]", "[][grow][][][][][][][][][][][][][]"));
 
 		JLabel lblNewLabel_4 = new JLabel("Question Title (optional)");
 		add(lblNewLabel_4, "cell 0 0,alignx right");
@@ -54,10 +52,10 @@ public class Matching extends JPanel{
 		add(lblC_1, "cell 4 7");
 
 		tfTitle = new JTextField();
-		add(tfTitle, "cell 2 0,growx,span");
+		add(tfTitle, "cell 2 0 6 1,growx");
 		tfTitle.setColumns(10);
 		jtpQ = new TextArea();
-		add(jtpQ, "cell 2 1,span,grow");
+		add(jtpQ, "cell 2 1 6 1,grow");
 		jtfAq = new JTextField();
 		add(jtfAq, "cell 2 3,alignx left");
 		jtfAq.setColumns(10);
@@ -77,23 +75,30 @@ public class Matching extends JPanel{
 		add(jtfCn, "cell 6 7,growx");
 		jtfCn.setColumns(10);
 
-		// JButton btnNewButton_3 = new JButton("Add Q&A");
-		// panel_2.add(btnNewButton_3, "cell 0 2,alignx left");
-		// JButton btnNewButton_4 = new JButton("Delete Selected");
-		// panel_2.add(btnNewButton_4, "cell 7 8");
-		// JButton btnSaveToTest = new JButton("Save to test file");
-		// panel_2.add(btnSaveToTest, "cell 0 10");
 		JButton btnAddAnother = new JButton(
 				"Save and Add another Matching Question");
-		add(btnAddAnother, "cell 0 13 3 1,alignx center,span");
+		add(btnAddAnother, "cell 0 13 3 1,alignx left");
+		
+		JButton btnCancleclear = new JButton("Cancle/clear Question text");
+		add(btnCancleclear, "cell 6 13");
+		btnCancleclear.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				// TODO Auto-generated method stub
+				tfTitle.setText("");
+				jtpQ.setText("");
+				jtfAq.setText("");
+				jtfAn.setText("");
+				jtfBq.setText("");
+				jtfBn.setText("");
+				jtfCq.setText("");
+				jtfCn.setText("");
+				
+			}
+		});
 
-		// JCheckBox chckbxDelete_1 = new JCheckBox("Delete");
-		// panel_2.add(chckbxDelete_1, "cell 7 2");
-		// JCheckBox chckbxDelete_2 = new JCheckBox("Delete");
-		// panel_2.add(chckbxDelete_2, "cell 7 4");
-		// JCheckBox chckbxDelete_3 = new JCheckBox("Delete");
-		// panel_2.add(chckbxDelete_3, "cell 7 6");
-
+		
 		btnAddAnother.addActionListener(new ActionListener() {
 
 			@Override

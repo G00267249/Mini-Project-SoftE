@@ -1,0 +1,13 @@
+import javax.swing.JPanel;
+
+
+public class Des extends JPanel {
+
+	/**
+	 * Create the panel.
+	 */
+	public Des() {
+
+	}
+
+}

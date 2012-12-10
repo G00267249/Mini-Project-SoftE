@@ -22,7 +22,7 @@ public class Main {
 		JFrame frame = new JFrame();
 		JTabbedPane t = new JTabbedPane();
 		frame.getContentPane().add(t, BorderLayout.CENTER);
-		frame.setSize(1000,600);
+		frame.setSize(900,700);
 		t.addTab("True-False", new True_False());
 		t.addTab("Matching", new Matching());
 		t.addTab("Multiple Choise", new Multiple_Choice());

@@ -1,0 +1,13 @@
+import javax.swing.JApplet;
+
+
+public class Short extends JApplet {
+
+	/**
+	 * Create the applet.
+	 */
+	public Short() {
+
+	}
+
+}

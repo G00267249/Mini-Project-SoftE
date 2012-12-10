@@ -1,6 +1,7 @@
 //package editor;
 
 import java.awt.Color;
+import java.awt.TextArea;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.BufferedWriter;
@@ -23,7 +24,7 @@ import net.miginfocom.swing.MigLayout;
 
 public class True_False extends JPanel {
 	private JTextField textfildeTitle;
-	private JTextPane textpanQ;
+	private TextArea textpanQ;
 	private JButton btnAddAnpther;
 	private char answer;
 	public static PrintWriter out;
@@ -44,7 +45,7 @@ public class True_False extends JPanel {
 		JLabel lblQuestion = new JLabel("Question");
 		add(lblQuestion, "cell 0 1,alignx right,aligny top");
 
-		textpanQ = new JTextPane();
+		textpanQ = new TextArea();
 		add(textpanQ, "cell 2 1 3 1,grow");
 
 		JRadioButton rdbtnTrue = new JRadioButton("True");
@@ -66,9 +67,20 @@ public class True_False extends JPanel {
 		ttt.add(rdbtnTrue);
 		ttt.add(rdbtnFalse);
 
-		JButton btnCancelclearQuestionText = new JButton(
-				"Cancel/Clear Question Text");
+		JButton btnCancelclearQuestionText = new JButton("Cancel/Clear Question Text");
 		add(btnCancelclearQuestionText, "cell 4 2,alignx right,aligny top");
+		btnCancelclearQuestionText.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				// TODO Auto-generated method stub
+				textfildeTitle.setText("");
+				textpanQ.setText("");
+				ttt.clearSelection();
+				
+				
+			}
+		});
 
 		btnAddAnpther = new JButton("Save and Add another True/False Question"); // True
 

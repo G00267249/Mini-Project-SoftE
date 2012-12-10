@@ -1,0 +1,13 @@
+import javax.swing.JPanel;
+
+
+public class Short_Answer extends JPanel {
+
+	/**
+	 * Create the panel.
+	 */
+	public Short_Answer() {
+
+	}
+
+}

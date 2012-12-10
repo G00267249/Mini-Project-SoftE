@@ -6,9 +6,9 @@
 		<item value="259" key="y"/>
 		<item value="457" key="x"/>
 	</section>
-	<section name="org.eclipse.wb.internal.swing.MigLayout.model.ui.RowEditDialog">
-	</section>
 	<section name="org.eclipse.wb.internal.swing.MigLayout.model.ui.ColumnEditDialog">
+	</section>
+	<section name="org.eclipse.wb.internal.swing.MigLayout.model.ui.RowEditDialog">
 	</section>
 	<section name="org.eclipse.wb.internal.swing.MigLayout.model.ui.ColumnsDialog">
 		<item value="381" key="height"/>

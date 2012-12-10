@@ -1,5 +1,6 @@
 //package editor;
 
+import java.awt.TextArea;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.BufferedWriter;
@@ -19,7 +20,7 @@ import net.miginfocom.swing.MigLayout;
 
 public class Matching extends JPanel{
 	private JTextField tfTitle;
-	private JTextPane jtpQ;
+	private TextArea jtpQ;
 	private JTextField jtfAq;
 	private JTextField jtfAn;
 	private JTextField jtfBq;
@@ -55,7 +56,7 @@ public class Matching extends JPanel{
 		tfTitle = new JTextField();
 		add(tfTitle, "cell 2 0,growx,span");
 		tfTitle.setColumns(10);
-		jtpQ = new JTextPane();
+		jtpQ = new TextArea();
 		add(jtpQ, "cell 2 1,span,grow");
 		jtfAq = new JTextField();
 		add(jtfAq, "cell 2 3,alignx left");
@@ -125,6 +126,9 @@ public class Matching extends JPanel{
 					jtfAn.setText("");
 					jtfBq.setText("");
 					jtfBn.setText("");
+					jtfCq.setText("");
+					jtfCn.setText("");
+
 
 				} catch (IOException e) {
 					// TODO Auto-generated catch block

@@ -1,4 +1,5 @@
 
+import java.awt.TextArea;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.BufferedWriter;
@@ -24,12 +25,13 @@ public class Multiple_Choice extends JPanel{
 	private JTextField choiseTextFilde2;
 	private JTextField choiseTextFilde3;
 	private JTextField choiseTextFilde4;
-	JTextPane question_mulit;
+	//JTextPane question_mulit;
 	private JTextField feadbackFilde1;
 	private JTextField feadbackFildeB;
 	private JTextField feadbackFildeC;
 	private JTextField feadbackFildeD;
 	private JCheckBox checkBoxoneanswer;
+	private TextArea question_mulit;
 //	private JFrame frame;
 	public static PrintWriter out;
 
@@ -51,7 +53,7 @@ public class Multiple_Choice extends JPanel{
 		JLabel lblQuestion_1 = new JLabel("Question");
 		add(lblQuestion_1, "cell 0 1,alignx right,aligny top");
 		
-		question_mulit = new JTextPane();
+		question_mulit = new TextArea();
 		add(question_mulit, "cell 1 1,grow,span");
 		
 //		JButton btnCancelclearQuestionText_1 = new JButton("Cancel/Clear Question Text");

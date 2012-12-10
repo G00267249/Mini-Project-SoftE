@@ -26,10 +26,10 @@ public class Main {
 		t.addTab("True-False", new True_False());
 		t.addTab("Matching", new Matching());
 		t.addTab("Multiple Choise", new Multiple_Choice());
-		t.addTab("Short Answer", new Short_Answer());
+		t.addTab("Short Answer", new ShortAnswer());
 		t.addTab("Essay", new Essay());
+		t.addTab("Description", new Descriptionn());
 
-		
 		frame.setVisible(true);
 
 	}

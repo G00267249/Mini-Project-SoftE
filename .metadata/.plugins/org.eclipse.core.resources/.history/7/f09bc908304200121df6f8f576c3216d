@@ -1,0 +1,29 @@
+import java.awt.TextArea;
+
+import javax.swing.JPanel;
+import net.miginfocom.swing.MigLayout;
+import javax.swing.JLabel;
+import javax.swing.JTextArea;
+import javax.swing.JButton;
+
+
+public class Descriptionn extends JPanel {
+
+	/**
+	 * Create the panel.
+	 */
+	public Descriptionn() {
+		setLayout(new MigLayout("", "[][grow]", "[grow][][]"));
+		
+		JLabel lblDescription = new JLabel("Description");
+		add(lblDescription, "cell 0 0");
+		
+		TextArea textArea = new TextArea();
+		add(textArea, "cell 1 0,grow");
+		
+		JButton btnSaveToFile = new JButton("Save to file");
+		add(btnSaveToFile, "cell 0 2");
+
+	}
+
+}

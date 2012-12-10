@@ -1,4 +1,5 @@
 
+import java.awt.TextArea;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.BufferedWriter;
@@ -17,7 +18,7 @@ import net.miginfocom.swing.MigLayout;
 
 public class Essay extends JPanel {
 	private JTextField jtfTitle;
-	private JTextPane jtfQ;
+	private TextArea jtfQ;
 	public static PrintWriter out;
 
 	public Essay() {
@@ -36,11 +37,11 @@ public class Essay extends JPanel {
 		
 		add(lblQuistion, "cell 0 1,alignx right");
 
-		jtfQ = new JTextPane();
+		jtfQ = new TextArea();
 		add(jtfQ, "cell 1 1,grow");
-
-		JButton btnNewButton = new JButton("Save and Add a other Question");
-		add(btnNewButton, "cell 1 3,alignx right");
+		
+				JButton btnNewButton = new JButton("Save to file");
+				add(btnNewButton, "cell 0 3,alignx left");
 		
 		btnNewButton.addActionListener(new ActionListener() {
 			
@@ -49,7 +50,6 @@ public class Essay extends JPanel {
 				try {
 					out = new PrintWriter(new BufferedWriter(new FileWriter(
 							"ExamQ.txt", true)));
-					String qusetionTitle = jtfTitle.getText();
 					String qusetionQ = jtfQ.getText();
 					
 					out.append("::" + qusetionQ + "{}" + "\n");
@@ -61,7 +61,8 @@ public class Essay extends JPanel {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-				
+				jtfTitle.setText("");
+				jtfQ.setText("");
 			}
 		});
 
